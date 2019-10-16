@@ -1,7 +1,6 @@
 package com.townsq.ninjachallenge.controllers;
 
 import com.townsq.ninjachallenge.models.Usuario;
-import com.townsq.ninjachallenge.services.GrupoService;
 import com.townsq.ninjachallenge.services.UsuarioService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,9 +20,6 @@ public class UsuarioRestController {
 
     @Autowired
     UsuarioService usuarioService;
-
-    @Autowired
-    GrupoService grupoService;
 
     @GetMapping
     @ApiOperation("Retorna todos os usuários do sistema")
