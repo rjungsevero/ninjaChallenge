@@ -19,16 +19,6 @@ public class Usuario extends EntidadeBase {
     @Column(nullable = false, name = "USERNAME", length = 50)
     private String username;
 
-    @NotBlank(message = "Senha é obrigatório")
-    @Column(nullable = false, name = "PASSWORD")
-    private String password;
-
-    @Transient
-    private String passwordConfirm;
-
-    @Column(nullable = false, name = "ENABLE")
-    private Boolean enable;
-
     @JsonProperty
     @ManyToMany
     private List<Grupo> grupos;
@@ -46,30 +36,6 @@ public class Usuario extends EntidadeBase {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPasswordConfirm() {
-        return passwordConfirm;
-    }
-
-    public void setPasswordConfirm(String passwordConfirm) {
-        this.passwordConfirm = passwordConfirm;
-    }
-
-    public Boolean getEnable() {
-        return enable;
-    }
-
-    public void setEnable(Boolean enable) {
-        this.enable = enable;
     }
 
     public List<Grupo> getGrupos() {
